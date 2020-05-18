@@ -59,6 +59,7 @@ input{
     color: white;
 }
 
+/* I know this is wrong, just didn't knoww a better way to do it at the time */
 .fas{
     float: right;
 }
