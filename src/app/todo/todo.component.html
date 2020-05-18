@@ -1,0 +1,20 @@
+<div class="todo-component">
+    <h1>TODO List</h1>
+    <h2>A place to store your todos</h2>
+    <label for="filter"></label>
+    <input type="text" id="filter" name="filter" placeholder="Filter your to-dos">
+
+    <ol class="list">
+        <!-- using a for of loop to show the objects in a list
+        this is a "built in directive"
+        2 ways to do this
+        ngClass = a way to trigger a class if a data condition is met 
+        [ngClass]="{ done: todo.completed } -->
+        <li *ngFor="let todo of todos" [class.done]="todo.completed" class="list-item">
+            <button class="complete" *ngIf="!todo.completed">Complete</button> {{ todo.task }}<i
+                class="fas fa-times"></i></li>
+    </ol>
+    <label for="addtodo"></label>
+    <input type="text" id="addtodo" name="addtodo" placeholder="Add your to-dos">
+    <button class="add">Add</button>
+</div>
